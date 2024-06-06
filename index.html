@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="DocGenome: An Open Large-scale Scientific Document Benchmark for Training and Testing Multi-modal Large Language Models.">
+  <meta name="keywords" content="Occupancy, Autonomous Driving">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DocGenome</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+  <!-- Todo@ change icon -->
+  <link rel="icon" href="./static/images/logo.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <!-- <script defer src="./static/js/fontawesome.all.min.js"></script> -->
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  <script src="https://kit.fontawesome.com/dcd6d05807.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/9.1.0/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h2 class="title is-2 publication-title">DocGenome: An Open Large-scale Scientific Document Benchmark for Training and Testing Multi-modal Large Language Models</h2>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Renqiu Xia</a><sup>1,2,*</sup>,</span>
+            <span class="author-block">
+              Song Mao</a><sup>1,*</sup>,</span>
+            <span class="author-block">
+              Xiangchao Yan</a><sup>1,*</sup>,</span>
+            <span class="author-block">
+              Hongbin Zhou</a><sup>1,</sup>,</span>
+            <span class="author-block">
+                Bo Zhang</a><sup>1,‡</sup>,</span>
+            <span class="author-block">
+                Haoyang Peng</a><sup>1</sup>,</span>
+            <span class="author-block">
+              Jiahao Pi</a><sup>1</sup>,</span>
+            <span class="author-block">
+                Daocheng Fu<sup>1</sup>,</span>
+            <span class="author-block">
+                Wenjie Wu<sup>1,2</sup>,</span>
+            <span class="author-block">
+                Hancheng Ye<sup>1</sup>,</span>
+            <span class="author-block">
+                Shiyang Feng<sup>4</sup>,</span>
+            <span class="author-block">
+                Bin Wang<sup>1</sup>,</span>
+            <span class="author-block">
+                Chao Xu<sup>1</sup>,</span>
+            <span class="author-block">
+                Conghui He<sup>1</sup>,</span>
+            <span class="author-block">
+                Pinlong Cai<sup>1</sup>,</span>
+            <span class="author-block">
+                Min Dou<sup>1</sup>,</span>
+            <span class="author-block">
+                Botian Shi<sup>1,‡</sup>,</span>
+            <span class="author-block">
+                Sheng Zhou<sup>3</sup>,</span>
+            <span class="author-block">
+                Yongwei Wang<sup>3</sup>,</span>
+            <span class="author-block">
+                Bin Wang<sup>4</sup>,</span>
+            <span class="author-block">
+                Junchi Yan<sup>1,2</sup>,</span>
+            <span class="author-block">
+                Fei Wu<sup>3</sup>,</span>
+            <span class="author-block">
+                Yu Qiao<sup>1</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup> Shanghai Artificial Intelligence Laboratory</span>
+            <span class="author-block"><sup>2</sup> Shanghai Jiao Tong University</span>
+            &nbsp<span class="author-block"><sup>3</sup> Zhejiang University</span>
+            &nbsp<span class="author-block"><sup>4</sup> Fudan University</span>
+            &nbsp<span class="eql-cntrb">
+                <small>
+                  <br><sup>*</sup> Equal Contribution &nbsp<sup>‡</sup> Corresponding author
+                </small>
+              </span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/UniModal4Reasoning/DocGenome.git"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <span class="link-block">
+                <a href="https://drive.google.com/drive/folders/1OIhnuQdIjuSSDc_QL2nP4NwugVDgtItD" 
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fa fa-file-archive"></i>
+                  </span>
+                  <span>Dataset</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- overall preview -->
+<section class="hero teaser">
+ <div class="hero-body">
+    <div class="container is-max-desktop">
+    <div id="results-carousel" class="carousel results-carousel">
+        <div class="item seq">
+            <div class="images-container">
+            <a href="./static/images/example1.png" data-lightbox="image-teaser" data-title="example 1">
+            <img src="./static/images/example1.png" alt="Image 1" class="image-equal"/>
+            </a></div>
+        </div>
+        <div class="item seq">
+            <div class="images-container">
+            <a href="./static/images/example2.png" data-lightbox="image-teaser" data-title="example 2">
+            <img src="./static/images/example2.png" alt="example 2" class="image-equal"/>
+            </a></div>
+        </div>
+        <div class="item seq">
+            <div class="images-container">
+            <a href="./static/images/example3.png" data-lightbox="image-teaser" data-title="example 3">
+            <img src="./static/images/example3.png" alt="example 3" class="image-equal"/>
+            </a></div>
+        </div>
+        <div class="item seq">
+            <div class="images-container">
+            <a href="./static/images/task.png" data-lightbox="image-teaser" data-title="task">
+            <img src="./static/images/task.png" alt="task" class="image-equal"/>
+            </a></div>
+        </div>
+    </div>
+    </div>
+</div>
+</section>
+
+
+<!-- abstract -->
+<section class="section hero is-light">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-2">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+                Scientific documents record research findings and valuable human knowledge, comprising a vast corpus of high-quality data. Thus, leveraging multi-modality data extracted from these documents and assessing large models' abilities to handle scientific document-oriented tasks is meaningful. Despite promising advancements, large models still perform poorly on multi-page scientific document extraction and understanding tasks, and their capacity to process within-document data formats such as charts and equations remains under-explored. To address these issues, we present DocGenome, a structured document dataset constructed by annotating 500K scientific documents from 153 disciplines in the arXiv open-access community, using our custom auto-labeling pipeline. DocGenome features four key characteristics: 
+                <br><br>1. Completeness: It is the first dataset to structure data from all modalities including 13 layout attributes along with their LaTeX source codes. 
+                <br>2. Logicality: It provides 6 logical relationships between different entities within each scientific document. 
+                <br>3. Diversity: It covers various document-oriented tasks, including document classification, visual grounding, document layout detection, document transformation, open-ended single-page QA and multi-page QA.  
+                <br>4. Correctness: It undergoes rigorous quality control checks conducted by a specialized team. 
+
+                <br><br>Besides, based on DocGenome, we conduct extensive experiments to demonstrate the advantages of DocGenome and objectively evaluate the performance of current large models on our benchmark.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End abstract -->
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <!--  Introduction. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+
+        <br/>
+        <!--/ Interpolating. -->
+
+        <h2 class="title is-3"> Overview of the DocGenome Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            Our work introduces DocGenome, a multi-modal dataset of academic documents encompassing 8 primary disciplines, 153 secondary disciplines, 13 categories of component units, and 6 types of entity relationships between units.
+          </p>
+
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column is-30 has-text-centered">
+            <div class="images-container">
+              <a href="./static/images/figure1.png" data-lightbox="Overview of the DocGenome Dataset" data-title="figure1">
+              <img src="./static/images/figure1.png"
+                   class="interpolation-image"
+                   alt="Overview of the DocGenome Dataset"/>
+            </a></div>
+            <p>Figure 1: Overview of the DocGenome Dataset. </p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="title is-3"></h3>
+        <br/><br/>
+        <h2 class="title is-3"> Dataset-Train Download</h2>
+        <div class="content has-text-justified">
+            <p>
+                We have released the DocGenome benchmark, includes 6 subsets as follows:
+                <br>1. <a href="https://drive.google.com/drive/folders/1OIhnuQdIjuSSDc_QL2nP4NwugVDgtItD">docgenome-train-000.tar.gz</a>
+                <br>2. <a href="https://drive.google.com/drive/folders/1OIhnuQdIjuSSDc_QL2nP4NwugVDgtItD">docgenome-train-001.tar.gz</a>
+                <br>3. <a href="https://drive.google.com/drive/folders/1OIhnuQdIjuSSDc_QL2nP4NwugVDgtItD">docgenome-train-002.tar.gz</a>
+                <br>4. <a href="https://drive.google.com/drive/folders/1OIhnuQdIjuSSDc_QL2nP4NwugVDgtItD">docgenome-train-003.tar.gz</a>
+                <br>5. <a href="https://drive.google.com/drive/folders/1OIhnuQdIjuSSDc_QL2nP4NwugVDgtItD">docgenome-train-004.tar.gz</a>
+                <br>6. <a href="https://drive.google.com/drive/folders/1OIhnuQdIjuSSDc_QL2nP4NwugVDgtItD">docgenome-train-005.tar.gz</a>
+            </p>
+        </div>
+        
+        <h3 class="title is-3"></h3>
+        <br/><br/>
+        <h2 class="title is-3"> DocParser: A Cutting-edge Auto-labeling Pipeline</h2>
+        <div class="content has-text-justified">
+            <p>
+                DocParser can convert LaTeX source code of a complete document into annotations for component units with source code, attributes, relationships, and bounding box, as well as a rendered PNG of the entire document. The process is divided into four distinct stages:
+                <br>1. Data Preprocessing
+                <br>2. Unit Segmentation 
+                <br>3. Attribute Assignment and Relation Retrieval,
+                <br>4. Color Rendering
+            </p>
+          <div class="columns is-vcentered interpolation-panel">
+            <div class="column is-30 has-text-centered">
+            <div class="images-container">
+              <a href="./static/images/auto_label_pipeline.png" data-lightbox="auto label pipeline" data-title="example 2">
+              <img src="./static/images/auto_label_pipeline.png"
+                   class="interpolation-image"
+                   alt="chematic of the designed DocParser pipeline for automated document annotation"/>
+            </a></div>
+            <p>Figure 2: Schematic of the designed DocParser pipeline for automated document annotation. </p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="title is-3"></h3>
+        <br/><br/>
+        <h2 class="title is-3"> DocGenome Benchmark Introduction</h2>
+        <div class="content has-text-justified">
+            <p>
+                To comprehensively show the advantages of the proposed DocGenome
+                dataset, we have reviewed visual document datasets and summarized them in Table 1. By comparison, our DocGenome demonstrates more
+                comprehensive features, including the number of disciplines and training samples covered, types of
+                tasks, evaluation metrics, and entity relationships.
+            </p>
+            <div class="columns is-vcentered interpolation-panel">
+                <div class="column is-30 has-text-centered">
+                <div class="images-container">
+                <a href="./static/images/table_1.png" data-lightbox="table_1" data-title="Comparison with document-related benchmarks">
+                <img src="./static/images/table_1.png"
+                        class="interpolation-image"
+                        alt="Comparison with document-related benchmarks"/>
+                </a></div>
+                <p>Table 1: Comparison with document-related benchmarks. “ - ” indicates that the corresponding part is not mentioned in the original paper. “ * ” means that each sample in their training set is cropped from the entire page, resulting in a total of 6.4M samples at the region level rather than the page level </p>
+                </div>
+            </div>
+            <br/>
+            <h4 class="title is-4">• Definition of relationships between component units</h4>
+            <p>
+            DocGenome Benchmark contains 4 level relation types and 2 cite relation types, as shown in the following table:
+            </p>
+            <div class="columns is-vcentered interpolation-panel">
+                <div class="column is-30 has-text-centered">
+                <div class="images-container">
+                <a href="./static/images/table2.png" data-lightbox="table2" data-title="The definition of logical relationships between component units">
+                <img src="./static/images/table2.png"
+                        class="interpolation-image"
+                        alt="The definition of logical relationships between component units"/>
+                </a></div>
+                <p>Table 2: The definition of logical relationships between component units</p>
+                </div>
+            </div>
+            <br/>
+            <h4 class="title is-4">• Attribute of component units</h4>
+            <p>
+            DocGenome has 13 attributes of component units, which can be categorized into two classes:
+            <br>1. Fixed-form units, including Text, Title, Abstract, etc., which are characterized by sequential reading and hierarchical relationships readily discernible from the list obtained in Stage-two of the designed DocParser.
+            <br>2. Floating-form units, including Table, Figure, etc., which establish directional references to fixed-form units through commands like \ref and \label.
+            </p>
+            <table>
+                <thead>
+                  <tr>
+                    <th><strong>Index</strong></th>
+                    <th><strong>Category</strong></th>
+                    <th><strong>Notes</strong></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>0</td>
+                    <td>Algorithm</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>Caption</td>
+                    <td>Titles of Images, Tables, and Algorithms</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Equation</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Figure</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Footnote</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>List</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>7</td>
+                    <td>Table</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>Text</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>9</td>
+                    <td>Text-EQ</td>
+                    <td>Text block with inline equations</td>
+                  </tr>
+                  <tr>
+                    <td>10</td>
+                    <td>Title</td>
+                    <td>Section titles</td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>PaperTitle</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>13</td>
+                    <td>Code</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>14</td>
+                    <td>Abstract</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            <br/>
+            <h4 class="title is-4">• Types of disciplines</h4>
+            <p>
+            Page distribution of DocGenome. 20% of documents are five pages or fewer, 50% are ten pages or fewer, and 80% are nineteen pages or fewer.
+            </p>
+            <div class="columns is-vcentered interpolation-panel">
+                <div class="column is-30 has-text-centered">
+                <div class="images-container">
+                <a href="./static/images/page_distribution.png" data-lightbox="page_distribution" data-title="page_distribution">
+                <img src="./static/images/page_distribution.png"
+                        class="interpolation-image"
+                        alt="page_distribution"/>
+                </a></div>
+                <p>Figure A.1: Page distribution of DocGenome.</p>
+                </div>
+            </div>
+            <p>
+            Distribution of secondary disciplines in our DocGenome. The count on the x-axis represents the number of documents, and documents from the same primary discipline are marked with the same color.
+            </p>
+            <div class="columns is-vcentered interpolation-panel">
+                <div class="column is-30 has-text-centered">
+                <div class="images-container">
+                <a href="./static/images/second_discipline.png" data-lightbox="second_discipline" data-title="second_discipline">
+                <img src="./static/images/second_discipline.png"
+                        class="interpolation-image"
+                        alt="second_discipline"/>
+                </a></div>
+                <p>Figure A.2: Distribution of secondary disciplines in our DocGenome.</p>
+                </div>
+            </div>
+        </div>
+
+
+<!-- <h3 class="title is-3"></h3>
+<br/><br/>
+<h2 class="title is-3">BibTeX</h2>
+<div class="content has-text-justified">
+    <div class="columns is-vcentered interpolation-panel">
+        <div class="column is-30">
+<pre><code>@article{xia2024docgenome,
+  title={DocGenome: An Open Large-scale Scientific Document Benchmark for Training Next-generation Large Models},
+  author={},
+  journal={arXiv preprint arXiv:},
+  year={2024}
+}</code></pre></div>
+</div></div> -->
+
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative
+                                                ATTRIBUTION-NONCOMMERCIAL-SHAREALIKE 4.0 INTERNATIONAL License</a>.</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
